@@ -52,6 +52,11 @@
               ],
               "outputHashing": "all"
             },
+            "github-pages": {
+              "baseHref": "/reniboediarti/",
+              "deployUrl": "/reniboediarti/",
+              "outputHashing": "all"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,

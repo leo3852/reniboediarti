@@ -11,7 +11,7 @@ npm run build:github-pages
 if [ $? -eq 0 ]; then
     echo "✅ Build successful!"
     echo ""
-    echo "📁 Built files are in: ./dist/reniboediarti/"
+    echo "📁 Built files are in: ./dist/reniboediarti/browser/"
     echo ""
     echo "🌐 To deploy to GitHub Pages:"
     echo "1. Push your code to the main branch:"

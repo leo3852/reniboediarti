@@ -114,9 +114,6 @@ Replace placeholder content with actual images:
 - Project images in the projects section
 - Any other visual elements
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Developer
 

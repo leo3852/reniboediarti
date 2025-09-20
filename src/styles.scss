@@ -4,12 +4,18 @@
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 /* Custom global styles for Reni's portfolio */
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  
+  font-family: "Quicksand", sans-serif;
   line-height: 1.6;
   color: #374151;
+}
+
+h1{
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 /* Custom component styles */
@@ -32,5 +38,26 @@ body {
   
   .section-padding {
     @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Custom height classes for responsive image sizing */
+  .h-90 {
+    height: 22.5rem; /* 360px */
+  }
+  
+  .h-100 {
+    height: 25rem; /* 400px */
+  }
+  
+  .h-120 {
+    height: 30rem; /* 480px */
+  }
+  
+  .h-140 {
+    height: 35rem; /* 560px */
+  }
+  
+  .w-112 {
+    width: 28rem; /* 448px */
   }
 }

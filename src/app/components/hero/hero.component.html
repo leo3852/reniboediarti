@@ -6,58 +6,89 @@
     <div class="absolute top-40 left-1/2 w-80 h-80 bg-rose-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float" style="animation-delay: 4s;"></div>
   </div>
   
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="animate-fade-in">
-      <!-- Profile Image Placeholder -->
-      <div class="mb-8 flex justify-center">
-        <div class="w-48 h-48 bg-gradient-to-br from-pink-300 to-purple-400 rounded-full flex items-center justify-center shadow-2xl">
-          <span class="text-6xl text-white font-script">R</span>
+      <!-- Hero Content Grid -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 mt-20">
+        
+        <!-- Left Side - Text Content -->
+        <div class="text-center lg:text-left order-2 lg:order-1">
+          <!-- Main Heading -->
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
+            <span class="gradient-text">Reni Boediarti</span>
+          </h1>
+          
+          <!-- Subtitle -->
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 mb-8">
+            Content Creator & Digital Storyteller
+          </h2>
+          
+          <!-- Description -->
+          <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Creating beautiful, engaging content that tells your story and connects with your audience. 
+            Let's bring your vision to life with creativity, passion, and modern design.
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+            <button class="btn-primary cursor-pointer" (click)="scrollToProjects()">
+              View My Work
+            </button>
+            <button class="btn-secondary cursor-pointer" (click)="scrollToContact()">
+              Get In Touch
+            </button>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="mt-12 flex justify-center lg:justify-start space-x-6">
+            <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/leauretha/" target="_blank" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
         </div>
-      </div>
-      
-      <!-- Main Heading -->
-      <h1 class="text-5xl md:text-7xl font-display font-bold mb-6">
-        <span class="gradient-text">Reni Boediarti</span>
-      </h1>
-      
-      <!-- Subtitle -->
-      <h2 class="text-2xl md:text-3xl font-light text-gray-700 mb-8">
-        Content Creator & Digital Storyteller
-      </h2>
-      
-      <!-- Description -->
-      <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-        Creating beautiful, engaging content that tells your story and connects with your audience. 
-        Let's bring your vision to life with creativity, passion, and modern design.
-      </p>
-      
-      <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <button class="btn-primary">
-          View My Work
-        </button>
-        <button class="btn-secondary">
-          Get In Touch
-        </button>
-      </div>
-      
-      <!-- Social Links -->
-      <div class="mt-16 flex justify-center space-x-6">
-        <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-          </svg>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
-          </svg>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors duration-300">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-        </a>
+        
+        <!-- Right Side - Profile Image -->
+        <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+          <div class="relative">
+            <!-- Image Container with Decorative Elements -->
+            <div class="relative">
+              <!-- Decorative background elements -->
+              <div class="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-pink-200 to-rose-200 rounded-full opacity-60 animate-float"></div>
+              <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-purple-200 to-lavender-200 rounded-full opacity-60 animate-float" style="animation-delay: 1s;"></div>
+              
+              <!-- Main Image -->
+              <div class="relative z-10">
+                <img 
+                  src="reni1.jpg" 
+                  alt="Reni Boediarti - Content Creator" 
+                  class="w-64 h-80 sm:w-72 sm:h-90 md:w-80 md:h-100 lg:w-96 lg:h-120 xl:w-112 xl:h-140 object-cover object-center rounded-3xl shadow-2xl border-4 border-white/20 transform hover:scale-105 transition-all duration-500"
+                  loading="eager"
+                />
+                
+                <!-- Image overlay gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+              </div>
+            </div>
+            
+            <!-- Floating decorative elements around image -->
+            <!-- <div class="absolute -top-8 -left-8 w-6 h-6 bg-pink-400 rounded-full animate-float opacity-80" style="animation-delay: 2s;"></div> -->
+            <!-- <div class="absolute -bottom-8 -right-8 w-4 h-4 bg-purple-400 rounded-full animate-float opacity-80" style="animation-delay: 3s;"></div> -->
+            <!-- <div class="absolute top-1/2 -left-12 w-3 h-3 bg-rose-400 rounded-full animate-float opacity-80" style="animation-delay: 4s;"></div> -->
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>

@@ -4,17 +4,20 @@
       <!-- Logo -->
       <div class="flex-shrink-0">
         <h1 class="text-2xl font-display font-bold gradient-text">
-          Reni Boediarti
+          Reni Boediarti 
         </h1>
       </div>
       
       <!-- Navigation Links -->
       <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8">
-          <a href="#home" class="text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium transition-colors duration-300">Home</a>
-          <a href="#about" class="text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium transition-colors duration-300">About</a>
-          <a href="#projects" class="text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium transition-colors duration-300">Projects</a>
-          <a href="#contact" class="text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium transition-colors duration-300">Contact</a>
+        <div class="ml-10 flex items-baseline space-x-5">
+          <a (click)="scrollToSection('home')" class="text-gray-700 hover:text-pink-600 px-2 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer">Home</a>
+          <a (click)="scrollToSection('about')" class="text-gray-700 hover:text-pink-600 px-2 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer">About</a>
+          <a (click)="scrollToSection('work')" class="text-gray-700 hover:text-pink-600 px-2 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer">Portfolio</a>
+          <a (click)="scrollToSection('growth')" class="text-gray-700 hover:text-pink-600 px-2 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer">Results</a>
+          <a (click)="scrollToSection('ai')" class="text-gray-700 hover:text-pink-600 px-2 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer">AI Work</a>
+          <a (click)="scrollToSection('media')" class="text-gray-700 hover:text-pink-600 px-2 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer">Media</a>
+          <a (click)="scrollToSection('contact')" class="text-gray-700 hover:text-pink-600 px-2 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer">Contact</a>
         </div>
       </div>
       
@@ -55,36 +58,56 @@
     <div 
       class="md:hidden transition-all duration-300 ease-in-out overflow-hidden"
       [class.max-h-0]="!isMobileMenuOpen"
-      [class.max-h-96]="isMobileMenuOpen"
+      [class.max-h-screen]="isMobileMenuOpen"
     >
       <div class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md border-t border-pink-100">
         <a 
-          href="#home" 
-          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300"
-          (click)="closeMobileMenu()"
+          (click)="scrollToSection('home'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
         >
-          Home
+          🏠 Home
         </a>
         <a 
-          href="#about" 
-          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300"
-          (click)="closeMobileMenu()"
+          (click)="scrollToSection('about'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
         >
-          About
+          👋 About
         </a>
         <a 
-          href="#projects" 
-          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300"
-          (click)="closeMobileMenu()"
+          (click)="scrollToSection('work'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
         >
-          Projects
+          📱 Social Media
         </a>
         <a 
-          href="#contact" 
-          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300"
-          (click)="closeMobileMenu()"
+          (click)="scrollToSection('campaigns'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
         >
-          Contact
+          🎯 Campaigns
+        </a>
+        <a 
+          (click)="scrollToSection('growth'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
+        >
+          📈 Growth Results
+        </a>
+        <a 
+          (click)="scrollToSection('ai'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
+        >
+          🤖 AI Work
+        </a>
+        <a 
+          (click)="scrollToSection('media'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
+        >
+          📺 Media
+        </a>
+        <a 
+          (click)="scrollToSection('contact'); closeMobileMenu()" 
+          class="text-gray-700 hover:text-pink-600 block px-3 py-2 text-base font-medium transition-colors duration-300 cursor-pointer"
+        >
+          💌 Contact
         </a>
       </div>
     </div>

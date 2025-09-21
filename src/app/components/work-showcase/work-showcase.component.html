@@ -1,0 +1,40 @@
+<section id="work" class="bg-gradient-to-br from-pink-50 to-purple-50">
+  <!-- Instagram Social Media Work -->
+  <div class="section-padding">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+          <span class="gradient-text">Social Media Portfolio</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Instagram page screenshots showcasing social media captions and brand launching work
+        </p>
+      </div>
+      
+      <!-- Instagram Work Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Instagram Images with Individual Captions -->
+        <div *ngFor="let work of instagramWork" class="space-y-4">
+          <div class="card overflow-hidden">
+            <div class="aspect-[638/1054] bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+              <img 
+                [src]="work.image" 
+                [alt]="work.caption"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <div class="hidden w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center">
+                <span class="text-gray-500 text-sm">Instagram Work {{ work.id }}</span>
+              </div>
+            </div>
+          </div>
+          <!-- Individual Caption for Each Image -->
+          <p class="mt-5 text-gray-600 text-center font-medium px-2">
+            {{ work.caption }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

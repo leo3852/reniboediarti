@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
@@ -8,10 +9,13 @@ import { GrowthResultsComponent } from '../growth-results/growth-results.compone
 import { AiWorkComponent } from '../ai-work/ai-work.component';
 import { MediaFeaturesComponent } from '../media-features/media-features.component';
 import { ContactComponent } from '../contact/contact.component';
+import { SplashScreenComponent } from '../splash-screen/splash-screen.component';
 
 @Component({
   selector: 'app-portfolio',
   imports: [
+    CommonModule,
+    SplashScreenComponent,
     HeaderComponent,
     HeroComponent,
     AboutComponent,
@@ -26,5 +30,9 @@ import { ContactComponent } from '../contact/contact.component';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  showSplash = true;
 
+  onSplashComplete(): void {
+    this.showSplash = false;
+  }
 }

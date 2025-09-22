@@ -24,24 +24,27 @@ export class MediaFeaturesComponent implements OnInit, OnDestroy {
   newsArticles = [
     {
       id: 1,
-      title: 'Social Media Strategy Expert',
-      description: 'Featured coverage of innovative social media expertise and brand development',
-      url: '#', // Replace with actual article URL
-      source: 'Tech Magazine'
+      title: '2025: Exclusive Interview With Kingfishr',
+      description: 'Irish folk trio Kingfishr spoke with Lauretha about their journey from engineering students to full-time musicians, sharing stories of family support, the making of their upcoming debut album Halcyon (out August 2025), their pride in opening for Bruce Springsteen, and their excitement for two major shows at Dublin’s 3Arena later this year.',
+      url: 'https://creativedisc.com/2025/06/creativedisc-exclusive-interview-with-kingfishr-debut-album-halcyon-ambil-hikmah-kesalahan-dalam-hidup', 
+      source: 'Creativedisc.com',
+      image: '/work/media/articles/article1.jpg'
     },
     {
       id: 2,
-      title: 'AI Annotation Specialist',
-      description: 'Industry insights on AI data annotation and machine learning safety',
-      url: '#', // Replace with actual article URL
-      source: 'AI Weekly'
+      title: '2024: Fontaines D.C Tampil Maksimal Pada Penutup Ujung Tahun Dengan Puluhan Ribu Fans di Kampung Halaman Dublin',
+      description: 'Fontaines D.C. celebrated the release of their 2024 album Romance with two sold-out hometown shows at Dublin’s 3Arena, delivering a powerful 21-song set that highlighted their global rise and the passionate support of Irish fans.',
+      url: 'https://creativedisc.com/2024/12/fontaines-dc-tampil-maksimal-pada-penutup-ujung-tahun-dengan-puluhan-ribu-fans-di-kampung-halaman-dublin', 
+      source: 'Creativedisc.com',
+      image: '/work/media/articles/article2.jpg'
     },
-    {
+    { 
       id: 3,
-      title: 'Content Creator Success',
-      description: 'Profile feature on successful content creation and community building',
-      url: '#', // Replace with actual article URL
-      source: 'Digital Today'
+      title: '2024: Dua Jam Lebih ‘Dipuaskan’ Non-stop Oleh Jonas Brothers Dalam Celebrating Five Albums The Tour 2024 Jakarta',
+      description: 'The Jonas Brothers brought their Celebrating Five Albums tour to Jakarta on February 24, 2024, thrilling thousands of fans at ICE BSD with a mix of nostalgic hits and new songs, all in a well-organized concert that highlighted both their enduring charm and musical evolution.',
+      url: 'https://creativedisc.com/2024/02/dua-jam-lebih-dipuaskan-non-stop-oleh-jonas-brothers-dalam-celebrating-five-albums-the-tour-2024-jakarta', 
+      source: 'Creativedisc.com',
+      image: '/work/media/articles/article3.jpg'
     }
   ];
 

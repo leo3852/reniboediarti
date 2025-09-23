@@ -109,7 +109,7 @@ export class MediaFeaturesComponent implements OnInit, OnDestroy {
     if (!this.isPaused) {
       this.slideInterval = setInterval(() => {
         this.nextSlide();
-      }, 5000); // Change slide every 5 seconds
+      }, 7000); // Change slide every 7 seconds
     }
   }
 
@@ -156,7 +156,8 @@ export class MediaFeaturesComponent implements OnInit, OnDestroy {
   }
 
   getYouTubeEmbedUrl(videoId: string): SafeResourceUrl {
-    const url = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=0&mute=0&rel=0&showinfo=0&modestbranding=1&controls=1&fs=1&iv_load_policy=3&enablejsapi=0&origin=${window.location.origin}&playsinline=1`;
+    // Enhanced privacy-focused YouTube embed with nocookie domain
+    const url = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=0&mute=0&rel=0&showinfo=0&modestbranding=1&controls=1&fs=1&iv_load_policy=3&enablejsapi=0&origin=${window.location.origin}&playsinline=1&cc_load_policy=0&disablekb=0&cc_lang_pref=en`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
@@ -174,7 +175,7 @@ export class MediaFeaturesComponent implements OnInit, OnDestroy {
   }
 
   handleSwipe(): void {
-    const swipeThreshold = 50;
+    const swipeThreshold = 50; 
     const diff = this.touchStartX - this.touchEndX;
     
     if (Math.abs(diff) > swipeThreshold) {

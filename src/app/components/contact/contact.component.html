@@ -22,9 +22,9 @@
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-green-800 font-medium">
-              <span *ngIf="USE_FORMSPREE">Message sent successfully! I'll get back to you soon.</span>
-              <span *ngIf="!USE_FORMSPREE && !USE_EMAILJS">Your email client should open with a pre-filled message. Please send it to complete your message.</span>
-              <span *ngIf="!USE_FORMSPREE && USE_EMAILJS">Message sent successfully! I'll get back to you soon.</span>
+              <span *ngIf="lastUsedMethod === 'formspree'">Message sent successfully via Formspree! I'll get back to you soon.</span>
+              <span *ngIf="lastUsedMethod === 'emailjs'">Message sent successfully via EmailJS! I'll get back to you soon.</span>
+              <span *ngIf="lastUsedMethod === 'mailto'">Your email client should open with a pre-filled message. Please send it to complete your message.</span>
             </p>
           </div>
           <button (click)="dismissMessage()" class="text-green-600 hover:text-green-800">
@@ -121,7 +121,7 @@
             </div>
             <div>
               <h4 class="font-semibold text-gray-800">Email</h4>
-              <p class="text-gray-600">lauretha.sudjono&#64;gmail.com</p>
+              <p class="text-gray-600">renisudjono&#64;gmail.com</p>
             </div>
           </div>
           

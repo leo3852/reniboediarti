@@ -20,20 +20,22 @@ export class ContactComponent {
   isSubmitting = false;
   submitStatus: 'idle' | 'success' | 'error' = 'idle';
   errorMessage = '';
+  lastUsedMethod: 'formspree' | 'emailjs' | 'mailto' | null = null;
 
-  // EmailJS configuration - Ready for production
-  // To enable EmailJS, replace these with your actual credentials from emailjs.com
+  // EmailJS configuration - Ready for production fallback
+  // To enable EmailJS fallback, replace these with your actual credentials from emailjs.com
   private readonly EMAILJS_SERVICE_ID = 'service_xxxxxxx'; // Replace with your service ID
   private readonly EMAILJS_TEMPLATE_ID = 'template_xxxxxxx'; // Replace with your template ID
   private readonly EMAILJS_PUBLIC_KEY = 'your_public_key'; // Replace with your public key
   
   // Production email configuration
-  private readonly PRODUCTION_EMAIL = 'lauretha.sudjono@gmail.com';
-  readonly USE_EMAILJS = false; // Set to true when EmailJS is configured
-  readonly USE_FORMSPREE = true; // Set to true to use Formspree (free direct email sending)
+  private readonly PRODUCTION_EMAIL = 'renisudjono@gmail.com';
   
-  // Formspree configuration - Replace with your Formspree endpoint
-  private readonly FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'; // Replace with your Formspree form ID
+  // Formspree configuration - Primary method (free tier)
+  private readonly FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqaykead'; // Replace with your Formspree form ID
+  
+  // Fallback system: Formspree (primary) -> EmailJS (fallback) -> Mailto (final fallback)
+  private readonly EMAILJS_ENABLED = false; // Set to true when EmailJS is configured for fallback
 
   async onSubmit() {
     if (this.isSubmitting) return;
@@ -57,21 +59,37 @@ export class ContactComponent {
     this.submitStatus = 'idle';
 
     try {
-      if (this.USE_FORMSPREE) {
-        // Use Formspree for direct email sending
+      // Try Formspree first (primary method)
+      try {
         await this.sendEmailWithFormspree();
-      } else if (this.USE_EMAILJS) {
-        // Use EmailJS for production
-        await this.sendEmailWithEmailJS();
-      } else {
-        // Use mailto fallback for immediate production deployment
+        this.lastUsedMethod = 'formspree';
+        this.submitStatus = 'success';
+        this.resetForm();
+        return; // Success, exit early
+      } catch (formspreeError) {
+        console.warn('Formspree failed, trying EmailJS fallback:', formspreeError);
+        
+        // Try EmailJS fallback if enabled
+        if (this.EMAILJS_ENABLED) {
+          try {
+            await this.sendEmailWithEmailJS();
+            this.lastUsedMethod = 'emailjs';
+            this.submitStatus = 'success';
+            this.resetForm();
+            return; // Success, exit early
+          } catch (emailjsError) {
+            console.warn('EmailJS fallback failed, using mailto:', emailjsError);
+          }
+        }
+        
+        // Final fallback: mailto
         await this.sendEmailWithMailto();
+        this.lastUsedMethod = 'mailto';
+        this.submitStatus = 'success';
+        this.resetForm();
       }
-      
-      this.submitStatus = 'success';
-      this.resetForm();
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('All email methods failed:', error);
       this.submitStatus = 'error';
       this.errorMessage = 'Failed to send message. Please try again or contact us directly.';
     } finally {
@@ -114,7 +132,16 @@ export class ContactComponent {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to send message');
+      // Check if it's a rate limit or quota exceeded error
+      if (response.status === 429 || response.status === 403) {
+        throw new Error('FORMSPREE_LIMIT_EXCEEDED');
+      }
+      throw new Error(`Formspree failed with status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    if (result.errors && result.errors.length > 0) {
+      throw new Error(`Formspree validation error: ${result.errors[0].message}`);
     }
   }
 

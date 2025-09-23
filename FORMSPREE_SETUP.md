@@ -12,12 +12,12 @@
 ### **Step 1: Sign Up for Formspree**
 1. Go to [https://formspree.io/](https://formspree.io/)
 2. Click "Get Started" (free)
-3. Sign up with your email: `lauretha.sudjono@gmail.com`
+3. Sign up with your email: `renisudjono@gmail.com`
 
 ### **Step 2: Create a New Form**
 1. Click "New Form"
 2. Form name: "Reni Boediarti Portfolio Contact"
-3. Email: `lauretha.sudjono@gmail.com`
+3. Email: `renisudjono@gmail.com`
 4. Click "Create Form"
 
 ### **Step 3: Get Your Form ID**
@@ -70,7 +70,7 @@ Once set up:
 1. Fill out the contact form
 2. Click "Send Message"
 3. See success message
-4. Check your email at `lauretha.sudjono@gmail.com`
+4. Check your email at `renisudjono@gmail.com`
 5. Email arrives instantly!
 
 ## 💰 **Pricing**

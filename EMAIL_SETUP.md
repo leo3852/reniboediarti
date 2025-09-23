@@ -5,7 +5,7 @@ The contact form is now **PRODUCTION READY** with:
 - ✅ Form validation (required fields, email format)
 - ✅ Success/error message display
 - ✅ Loading states and user feedback
-- ✅ Email address configured: `lauretha.sudjono@gmail.com`
+- ✅ Email address configured: `renisudjono@gmail.com`
 - ✅ Professional UI with proper styling
 - ✅ **Mailto fallback** - Works immediately when published!
 - ✅ **EmailJS integration** - Ready to enable when needed
@@ -16,7 +16,7 @@ Your contact form is **production-ready** and will work immediately when you pub
 
 ### How It Works Now (Mailto Method)
 - ✅ **User fills form** → Clicks "Send Message"
-- ✅ **Email client opens** with pre-filled message to `lauretha.sudjono@gmail.com`
+- ✅ **Email client opens** with pre-filled message to `renisudjono@gmail.com`
 - ✅ **User sends email** from their email client
 - ✅ **You receive email** in your Gmail inbox
 
@@ -29,7 +29,7 @@ Your contact form is **production-ready** and will work immediately when you pub
    - Create a free account (100 emails/month free)
 
 2. **Set up Email Service**:
-   - Connect your Gmail account (`lauretha.sudjono@gmail.com`)
+   - Connect your Gmail account (`renisudjono@gmail.com`)
    - Create a new service in EmailJS dashboard
 
 3. **Create Email Template**:
@@ -38,7 +38,7 @@ Your contact form is **production-ready** and will work immediately when you pub
      - `{{from_email}}` - Sender's email
      - `{{subject}}` - Email subject
      - `{{message}}` - Email message
-     - `{{to_email}}` - Your email (lauretha.sudjono@gmail.com)
+     - `{{to_email}}` - Your email (renisudjono@gmail.com)
 
 4. **Update Configuration**:
    - Replace the placeholder values in `contact.component.ts`:
@@ -56,7 +56,7 @@ Your contact form is **production-ready** and will work immediately when you pub
 
 1. Add `netlify` attribute to the form
 2. Add hidden input for Netlify
-3. Configure Netlify to send emails to lauretha.sudjono@gmail.com
+3. Configure Netlify to send emails to renisudjono@gmail.com
 
 ### Option 3: Formspree (Alternative)
 

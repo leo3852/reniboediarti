@@ -57,6 +57,11 @@
               "deployUrl": "/reniboediarti/",
               "outputHashing": "all"
             },
+            "custom-domain": {
+              "baseHref": "/",
+              "deployUrl": "/",
+              "outputHashing": "all"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,

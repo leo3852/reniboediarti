@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:github-pages": "ng build --configuration=github-pages",
+    "build:custom-domain": "ng build --configuration=custom-domain",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

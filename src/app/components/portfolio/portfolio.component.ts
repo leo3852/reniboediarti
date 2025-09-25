@@ -7,6 +7,7 @@ import { WorkShowcaseComponent } from '../work-showcase/work-showcase.component'
 import { CampaignsComponent } from '../campaigns/campaigns.component';
 import { GrowthResultsComponent } from '../growth-results/growth-results.component';
 import { AiWorkComponent } from '../ai-work/ai-work.component';
+import { ClientsBrandsComponent } from '../clients-brands/clients-brands.component';
 import { MediaFeaturesComponent } from '../media-features/media-features.component';
 import { ContactComponent } from '../contact/contact.component';
 import { SplashScreenComponent } from '../splash-screen/splash-screen.component';
@@ -23,6 +24,7 @@ import { SplashScreenComponent } from '../splash-screen/splash-screen.component'
     CampaignsComponent,
     GrowthResultsComponent,
     AiWorkComponent,
+    ClientsBrandsComponent,
     MediaFeaturesComponent,
     ContactComponent
   ],

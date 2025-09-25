@@ -7,9 +7,9 @@
       </h2>
     </div>
     
-    <div class="grid lg:grid-cols-2 gap-12 items-start">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Content -->
-      <div class="space-y-8">
+      <div class="space-y-8 order-1 lg:order-2">
         <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
           <h3 class="text-2xl font-semibold text-gray-800 mb-6">AI Data Annotation Specialist</h3>
           
@@ -27,19 +27,25 @@
         </div>
       </div>
       
-      <!-- AI Image -->
-      <div class="flex justify-center">
-        <div class="card overflow-hidden max-w-md">
-          <div class="aspect-[500/500] bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+      <!-- AI Work Image -->
+      <div class="flex justify-center lg:justify-start order-2 lg:order-1">
+        <div class="relative">
+          <!-- Decorative background elements -->
+          <div class="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-60 animate-float" style="animation-delay: 0.5s;"></div>
+          <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-60 animate-float" style="animation-delay: 1.5s;"></div>
+          
+          <!-- AI Work Image -->
+          <div class="relative z-10">
             <img 
               src="work/ai/ai.jpg" 
-              alt="AI annotation work"
-              class="w-full h-full object-cover"
+              alt="AI annotation work and data processing" 
+              class="w-64 h-80 sm:w-72 sm:h-90 md:w-80 md:h-100 lg:w-96 lg:h-120 xl:w-112 xl:h-140 object-cover object-center rounded-3xl shadow-2xl border-4 border-white/20 transform hover:scale-105 transition-all duration-500"
               loading="lazy"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
             />
-            <div class="hidden w-full h-full bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center">
-              <span class="text-gray-500 text-sm">AI Work</span>
+            <!-- Fallback content -->
+            <div class="hidden w-64 h-80 sm:w-72 sm:h-90 md:w-80 md:h-100 lg:w-96 lg:h-120 xl:w-112 xl:h-140 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl shadow-2xl border-4 border-white/20 flex items-center justify-center">
+              <span class="text-gray-500 text-sm font-medium">AI Work</span>
             </div>
           </div>
         </div>
@@ -54,38 +60,66 @@
         Delivered high-quality annotation of sensitive AI data (text, image and video):
       </p>
       
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="space-y-4">
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="font-semibold text-gray-800 mb-2">LLAMA Meta AI project with CSE</h4>
-            <p class="text-gray-600 text-sm">Speech mitigation prompts evaluation with audio annotation</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="font-semibold text-gray-800 mb-2">Llama Trains Safety Eval</h4>
-            <p class="text-gray-600 text-sm">With Image Understanding</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="font-semibold text-gray-800 mb-2">Movie Gen AI</h4>
-            <p class="text-gray-600 text-sm">Uses text input to create long high-definition videos at different aspect ratios</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="font-semibold text-gray-800 mb-2">UGC evaluates prompts</h4>
-            <p class="text-gray-600 text-sm">Classifies to be benign or adversarial annotation</p>
+      <!-- Meta Office Photo and Projects Grid -->
+      <div class="grid lg:grid-cols-3 gap-8 items-start mb-8">
+        <!-- Meta Office Photo -->
+        <div class="lg:col-span-1 flex justify-center">
+          <div class="relative">
+            <!-- Decorative background elements -->
+            <div class="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-60 animate-float"></div>
+            <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-60 animate-float" style="animation-delay: 1s;"></div>
+            
+            <!-- Meta Office Photo -->
+            <div class="relative z-10">
+              <img 
+                src="work/ai/meta-office.jpeg" 
+                alt="Reni Boediarti working at Meta office - LLM AI Projects" 
+                class="w-64 h-80 sm:w-72 sm:h-90 md:w-80 md:h-100 object-cover object-center rounded-3xl shadow-2xl border-4 border-white/20 transform hover:scale-105 transition-all duration-500"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <!-- Fallback content -->
+              <div class="hidden w-64 h-80 sm:w-72 sm:h-90 md:w-80 md:h-100 bg-gradient-to-br from-blue-200 to-purple-200 rounded-3xl shadow-2xl border-4 border-white/20 flex items-center justify-center">
+                <span class="text-gray-500 text-sm font-medium">Meta Office Photo</span>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div class="space-y-4">
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="font-semibold text-gray-800 mb-2">Project Cannes Consumption Youth Safety Policy</h4>
-            <p class="text-gray-600 text-sm">Data labelling and annotation for content with high harm such as suicide, eating disorder and sexual content violation on youth policy guidelines.</p>
+        <!-- Projects Grid -->
+        <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-800 mb-2">LLAMA Meta AI project with CSAM safety evaluation</h4>
+              <p class="text-gray-600 text-sm">Speech mitigation prompts evaluation with audio annotation</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-800 mb-2">Llama Trains Safety Eval</h4>
+              <p class="text-gray-600 text-sm">With Image Understanding</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-800 mb-2">Movie Gen AI</h4>
+              <p class="text-gray-600 text-sm">Uses text input to create long high-definition videos at different aspect ratios</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-800 mb-2">UGC evaluates prompts</h4>
+              <p class="text-gray-600 text-sm">Classifies to be benign or adversarial annotation</p>
+            </div>
           </div>
           
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h4 class="font-semibold text-gray-800 mb-2">AI Studio Safety</h4>
-            <p class="text-gray-600 text-sm">Evaluates component of AI studio avatar and description not to violate the policy safety guideline</p>
+          <div class="space-y-4">
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-800 mb-2">Project Cannes Consumption Youth Safety Policy</h4>
+              <p class="text-gray-600 text-sm">Data labelling and annotation for content with high harm such as suicide, eating disorder and sexual content violation on youth policy guidelines.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-800 mb-2">AI Studio Safety</h4>
+              <p class="text-gray-600 text-sm">Evaluates component of AI studio avatar and description not to violate the policy safety guideline</p>
+            </div>
           </div>
         </div>
       </div>
